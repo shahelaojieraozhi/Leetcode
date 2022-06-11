@@ -1,0 +1,1 @@
+超简单！Python 为图片和 PDF 上去掉水印：https://mp.weixin.qq.com/s/yUT3G5HZKZVI4Adq_AjoEg

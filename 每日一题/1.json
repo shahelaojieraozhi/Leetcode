@@ -1,0 +1,25 @@
+[
+{ "Timestamp":1392650637028836000, "Value":{
+    "barGraph" : 4,
+    "beep" : false,
+    "droppingo2Sat" : false,
+    "o2saturation" : 99,
+    "probeError" : false,
+    "pulseRate" : 67,
+    "searching" : false,
+    "searchingToLong" : false,
+    "signalStrength" : 6,
+    "waveform" : 32
+}, "FrameID":""},
+{ "Timestamp":1392650637045246000, "Value":{
+    "barGraph" : 4,
+    "beep" : false,
+    "droppingo2Sat" : false,
+    "o2saturation" : 99,
+    "probeError" : false,
+    "pulseRate" : 67,
+    "searching" : false,
+    "searchingToLong" : false,
+    "signalStrength" : 6,
+    "waveform" : 32
+}, "FrameID":""}]

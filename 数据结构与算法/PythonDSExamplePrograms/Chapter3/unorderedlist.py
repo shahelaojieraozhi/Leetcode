@@ -32,7 +32,7 @@ class UnorderedList:
     def add(self, item):
         temp = Node(item)
         temp.setNext(self.head)
-        self.head = temp
+        self.head = temp    # 头部储存下一个节点的指针
 
     def length(self):
         current = self.head

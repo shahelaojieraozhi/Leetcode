@@ -25,20 +25,20 @@
 import collections
 
 
-# class Solution:
-#     def firstUniqChar(self, s):
-#         frequence = collections.Counter(s)
-#         for j, c in enumerate(s):
-#             if frequence[c] == 1:
-#                 return j
-#         return -1
-#
-#
-# s = "dddccdbba"
-# Soga = Solution()
-# Answer = Soga.firstUniqChar(s)
-# print(Answer)
-#
+class Solution:
+    def firstUniqChar(self, s):
+        frequence = collections.Counter(s)
+        for j, c in enumerate(s):
+            if frequence[c] == 1:
+                return j
+        return -1
+
+
+s = "dddccdbba"
+Soga = Solution()
+Answer = Soga.firstUniqChar(s)
+print(Answer)
+
 # collections.Counter(s)
 
 # # 方法二：使用哈希表存储索引
@@ -66,23 +66,23 @@ import collections
 # print(Answer)
 
 
-class Solution:
-    def firstUniqChar(self, s: str) -> int:
-        position = dict()
-        q = collections.deque()
-        n = len(s)
-        for i, ch in enumerate(s):
-            if ch not in position:
-                position[ch] = i
-                q.append((s[i], i))
-            else:
-                position[ch] = -1
-                while q and position[q[0][0]] == -1:
-                    q.popleft()
-        return -1 if not q else q[0][1]
-
-
-s = "dddccdbba"
-Soga = Solution()
-Answer = Soga.firstUniqChar(s)
-print(Answer)
+# class Solution:
+#     def firstUniqChar(self, s: str) -> int:
+#         position = dict()
+#         q = collections.deque()
+#         n = len(s)
+#         for i, ch in enumerate(s):
+#             if ch not in position:
+#                 position[ch] = i
+#                 q.append((s[i], i))
+#             else:
+#                 position[ch] = -1
+#                 while q and position[q[0][0]] == -1:
+#                     q.popleft()
+#         return -1 if not q else q[0][1]
+#
+#
+# s = "dddccdbba"
+# Soga = Solution()
+# Answer = Soga.firstUniqChar(s)
+# print(Answer)

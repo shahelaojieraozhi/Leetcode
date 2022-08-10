@@ -36,3 +36,5 @@ class Solution:
 
             pre = pre.next.next
         return res.next
+
+

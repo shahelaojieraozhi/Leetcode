@@ -290,13 +290,121 @@ s = "ADOBECODEBANC"
 # print(collections.Counter(s))
 
 # coding=utf-8
-import collections
+# import collections
+#
+# queue = collections.deque()
+# queue.append('a')
+# queue.append('b')
+# queue.append('c')
+# print(queue)
+# queue.appendleft('A')
+# queue.appendleft('B')
+# print(queue)
 
-queue = collections.deque()
-queue.append('a')
-queue.append('b')
-queue.append('c')
-print(queue)
-queue.appendleft('A')
-queue.appendleft('B')
-print(queue)
+# num_sorted = []
+# P2 = 3
+# nums2 = [1, 2, 3, 0, 0, 0]
+# num = num_sorted + nums2[P2:]
+# print(num)
+
+import numpy as np
+
+# a = np.arange(10)
+#
+# for i in a[::-1]:
+#     print(i)
+
+# nums1 = [1, 2, 3, 4, 5]
+#
+# print(nums1[:0])
+
+digits = [3, 1, 2]
+# L = len(digits)
+# num = 0
+# shuwei = 1
+# for i in range(L):
+#     for j in range((L - i - 1)):
+#         shuwei *= 10
+#     num += (digits[i] * shuwei)
+#     shuwei = 1
+#
+# print(num)
+#
+# lis_ = list(str(num))
+# print(lis_)
+# print(int(lis_[0]))
+# lis = []
+# for i in lis_:
+#     lis.append(int(i))
+# print(lis)
+
+# str1 = []
+# for element in digits:
+#     str1 += str(element)
+# num = int(''.join(str1))
+# print(num)
+
+# a = 899
+#
+# print(str(a))
+# b = [int(i) for i in str(a)]
+# print(b)
+
+# lis = [1, 2, 3, 4]
+# lis[:2] = 0
+# print(lis)
+
+# arr = [37, 12, 28, 9, 100, 56, 80, 5, 12]
+# slow = fast = 0
+# inx_list = []
+# index = 0
+# while slow < len(arr):
+#     if arr[fast] <= arr[slow]:
+#         index += 1
+#     fast += 1
+#     if fast >= len(arr):
+#         inx_list.append(index)
+#         slow += 1
+#         index = 0
+#
+# print(inx_list)
+
+# print(min(arr))
+
+arr = [37, 12, 28, 9, 100, 56, 80, 5, 12]
+# n = len(arr)
+# idx_lis = []
+# num = 0
+# for i in range(n):
+#     idx = 1
+#     for j in range(n):
+#         if arr[i] > arr[j]:
+#             idx += 1
+#         elif arr[i] == arr[j] and i != j:
+#             # 前i个全部 -1
+#             num += 1
+#
+#     idx_lis.append(idx)
+#
+# for k in range(len(idx_lis)):
+#     idx_lis[k] = idx_lis[k] - (num//2)
+#
+# print(idx_lis)
+
+
+# print(sorted(set(arr)))
+# map1 = sorted(set(arr))
+# map2 = {}
+# for idx, element in enumerate(map1, 1):
+#     map2[element] = idx
+# print(map2)
+# lis = [map2[v] for v in arr]
+# print(lis)
+#
+#
+# def arrayRankTransform(arr):
+#     ranks = {element: idx for idx, element in enumerate(sorted(set(arr)), 1)}
+#     return [ranks[v] for v in arr]
+#
+#
+# print(arrayRankTransform(arr))

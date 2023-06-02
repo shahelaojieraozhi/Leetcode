@@ -49,34 +49,34 @@
 
 
 # # 代码随想录
-# class Solution:
-#     """双指针法
-#     时间复杂度：O(n)
-#     空间复杂度：O(1)
-#     """
-#
-#     @classmethod
-#     def removeElement(cls, nums, val):
-#         fast = slow = 0
-#
-#         while fast < len(nums):
-#
-#             if nums[fast] != val:
-#                 nums[slow] = nums[fast]
-#                 slow += 1
-#
-#             # 当 fast 指针遇到要删除的元素时停止赋值
-#             # slow 指针停止移动, fast 指针继续前进
-#             fast += 1
-#         return slow
-#
-#
-# Soga = Solution()
-# nums = [0, 1, 2, 2, 3, 0, 4, 2]
-# val = 2
-# Answer = Soga.removeElement(nums, val)
-# print(Answer)
-# print(nums)
+class Solution:
+    """双指针法
+    时间复杂度：O(n)
+    空间复杂度：O(1)
+    """
+
+    @classmethod
+    def removeElement(cls, nums, val):
+        fast = slow = 0
+
+        while fast < len(nums):
+
+            if nums[fast] != val:
+                nums[slow] = nums[fast]
+                slow += 1
+
+            # 当 fast 指针遇到要删除的元素时停止赋值
+            # slow 指针停止移动, fast 指针继续前进
+            fast += 1
+        return slow
+
+
+Soga = Solution()
+nums = [0, 1, 2, 2, 3, 0, 4, 2]
+val = 2
+Answer = Soga.removeElement(nums, val)
+print(Answer)
+print(nums)
 
 
 

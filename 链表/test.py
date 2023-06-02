@@ -9,14 +9,7 @@
 # print(arr.shape)
 
 
-grid = [[0, 1, 0, 0], [1, 1, 1, 0], [0, 1, 0, 0], [1, 1, 0, 0]]
+# grid = [[0, 1, 0, 0]]
+# cur = grid.pop()
+# print(cur)
 
-
-m, n = len(grid), len(grid[0])  # m = 4; n = 4
-for i in range(m):
-    grid[i].insert(n, 0)
-    grid[i].insert(0, 0)
-# grid.insert(m, [0] * (n + 2))
-# grid.insert(0, [0] * (n + 2))
-
-print(grid)

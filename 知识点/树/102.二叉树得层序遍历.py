@@ -1,4 +1,6 @@
-# Definition for a binary tree node.
+import json
+
+
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
@@ -7,48 +9,30 @@ class TreeNode:
 
 
 class Solution:
-    # 前序遍历-递归-LC144_二叉树的前序遍历
-    def preorderTraversal(self, root: TreeNode):
-        # 保存结果
-        result = []
+    """二叉树层序遍历迭代解法"""
 
-        def traversal(root: TreeNode):
-            if root == None:
-                return
-            result.append(root.val)  # 前序
-            traversal(root.left)  # 左
-            traversal(root.right)  # 右
+    def levelOrder(self, root: TreeNode):
+        results = []
+        if not root:
+            return results
 
-        traversal(root)
-        return result
+        from collections import deque
+        que = deque([root])
 
-    # 中序遍历-递归-LC94_二叉树的中序遍历
-    def inorderTraversal(self, root: TreeNode):
-        result = []
+        while que:
+            size = len(que)
+            # 记录每层的结果
+            result = []
+            for _ in range(size):
+                cur = que.popleft()
+                result.append(cur.val)
+                if cur.left:
+                    que.append(cur.left)
+                if cur.right:
+                    que.append(cur.right)
+            results.append(result)
 
-        def traversal(root: TreeNode):
-            if root == None:
-                return
-            traversal(root.left)  # 左
-            result.append(root.val)  # 中序
-            traversal(root.right)  # 右
-
-        traversal(root)
-        return result
-
-    # 后序遍历-递归-LC145_二叉树的后序遍历
-    def postorderTraversal(self, root: TreeNode):
-        result = []
-
-        def traversal(root: TreeNode):
-            if root == None:
-                return
-            traversal(root.left)  # 左
-            traversal(root.right)  # 右
-            result.append(root.val)  # 后序
-
-        traversal(root)
-        return result
+        return results
 
 
 def stringToTreeNode(input):
@@ -85,9 +69,6 @@ def stringToTreeNode(input):
     return root
 
 
-import json
-
-
 def integerListToString(nums, len_of_list=None):
     if not len_of_list:
         len_of_list = len(nums)
@@ -107,7 +88,7 @@ def main():
             line = next(lines)
             root = stringToTreeNode(line)
 
-            ret = Solution().preorderTraversal(root)
+            ret = Solution().levelOrder(root)
 
             out = integerListToString(ret)
             print(out)

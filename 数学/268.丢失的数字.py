@@ -9,7 +9,6 @@
 
 """
 
-
 # class Solution(object):
 #     def missingNumber(self, nums):
 #         """
@@ -30,28 +29,30 @@
 # print(S.missingNumber(nums))
 
 
-class Solution(object):
-    def missingNumber(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        nums_refer = [i for i in range(len(nums) + 1)]
-        for key in set(nums_refer) - set(nums):
-            return key
-
-
-nums = [9, 6, 4, 2, 3, 5, 7, 0, 1]
-
-S = Solution()
-print(S.missingNumber(nums))
+# class Solution(object):
+#     def missingNumber(self, nums):
+#         """
+#         :type nums: List[int]
+#         :rtype: int
+#         """
+#         nums_refer = [i for i in range(len(nums) + 1)]
+#         for key in set(nums_refer) - set(nums):
+#             return key
+#
+#
+# nums = [9, 6, 4, 2, 3, 5, 7, 0, 1]
+#
+# S = Solution()
+# print(S.missingNumber(nums))
 
 """ 这个快很多,  还不知道怎么取set里的元素, 用 for 取太不文雅了 """
 
 """   数学解法 ------  求和再求差 """
+from line_profiler_pycharm import profile
 
 
 class Solution(object):
+    @profile
     def missingNumber(self, nums):
         """
         :type nums: List[int]
